@@ -71,16 +71,15 @@ tolerations: []
 
 affinity: {}
 
-volume: {}
-#  readOnly: false # is this volume readonly ? (optional, default true)
-#  volumeSpec: # see https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/#persistentvolumespec-v1-core
-#    accessModes:
-#      - ReadWriteOnce
-#    capacity:
-#      storage: 8Ti
-#    nfs:
-#      path: /nas/files
-#      server: my-nfs-server.example.com
+volume:
+ volumeSpec: # see https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.26/#persistentvolumespec-v1-core
+   accessModes:
+     - ReadWriteOnce
+   capacity:
+     storage: 8Ti
+   nfs:
+     path: /nas/files
+     server: my-nfs-server.example.com
 
 persistence:
   # -- Claims that pods are allowed to reference (see

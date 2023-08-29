@@ -50,7 +50,6 @@ spec:
               mountPath: /cfg
             - name: data
               mountPath: /w
-            {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -70,4 +69,3 @@ spec:
         - name: data
           persistentVolumeClaim:
             claimName: {{ include "copyparty.fullname" . }}-data
-        {{- end }}
