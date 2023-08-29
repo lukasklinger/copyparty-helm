@@ -1,0 +1,27 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "copyparty.fullname" . }}-data
+  labels:
+    {{- include "copyparty.labels" . | nindent 4 }}
+    volume: data
+spec:
+  storageClassName: ""
+  selector:
+    matchLabels:
+      {{- include "copyparty.labels" . | nindent 4 }}
+      volume: data
+  accessModes: {{ toYaml .Values.volume.volumeSpec.accessModes | nindent 4 }}
+  resources:
+    requests: {{ toYaml .Values.volume.volumeSpec.capacity | nindent 6 }}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "copyparty.fullname" . }}-data
+  labels:
+    {{- include "copyparty.labels" . | nindent 4 }}
+    volume: data
+spec: {{ toYaml .Values.volume.volumeSpec | nindent 2 }}
+{{- end }}
