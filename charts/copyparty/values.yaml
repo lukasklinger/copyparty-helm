@@ -78,8 +78,8 @@ volume:
    capacity:
      storage: 8Ti
    nfs:
-     path: /nas/files
-     server: my-nfs-server.example.com
+     path: /srv/storage
+     server: fileserver.chaosdorf.space
 
 persistence:
   # -- Claims that pods are allowed to reference (see

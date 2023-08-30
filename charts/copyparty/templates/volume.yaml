@@ -5,13 +5,11 @@ metadata:
   name: {{ include "copyparty.fullname" . }}-data
   labels:
     volume: data
-    {{- include "copyparty.labels" . | nindent 4 }}
 spec:
   storageClassName: ""
   selector:
     matchLabels:
       volume: data
-      {{- include "copyparty.labels" . | nindent 4 }}
   accessModes: {{ toYaml .Values.volume.volumeSpec.accessModes | nindent 4 }}
   resources:
     requests: {{ toYaml .Values.volume.volumeSpec.capacity | nindent 6 }}
@@ -22,5 +20,4 @@ metadata:
   name: {{ include "copyparty.fullname" . }}-data
   labels:
     volume: data
-    {{- include "copyparty.labels" . | nindent 4 }}
 spec: {{ toYaml .Values.volume.volumeSpec | nindent 2 }}
