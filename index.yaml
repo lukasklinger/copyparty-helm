@@ -3,6 +3,16 @@ entries:
   copyparty:
   - apiVersion: v2
     appVersion: 1.9.28
+    created: "2026-03-24T20:33:11.702289084Z"
+    description: A Helm chart for Kubernetes
+    digest: 758909584d0e4d605db16bd6853a7bb3856fb17c0f57ad30803f4ba4c6a4cda5
+    name: copyparty
+    type: application
+    urls:
+    - https://github.com/lukasklinger/copyparty-helm/releases/download/copyparty-0.1.4/copyparty-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.9.28
     created: "2024-01-08T20:16:35.319150613Z"
     description: A Helm chart for Kubernetes
     digest: ec6964d16135aa16ca818998f6d80d16ce790ecb4c21447d460d7d9e8b269a01
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/lukasklinger/copyparty-helm/releases/download/copyparty-0.1.1/copyparty-0.1.1.tgz
     version: 0.1.1
-generated: "2024-01-08T20:16:35.319168205Z"
+generated: "2026-03-24T20:33:11.702309294Z"
